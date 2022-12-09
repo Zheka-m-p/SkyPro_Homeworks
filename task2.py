@@ -17,15 +17,17 @@ class Task:
     def __hash__(self):
         return hash(self.__content)
 
+    def __bool__(self):
+        return bool(self.__content)
 
-Task('Сделать домашку')
 
-todo_list = set()
+todo_list = []
 
-todo_list.add(Task('Сделать домашку'))
-todo_list.add(Task('Выпить кофе'))
-todo_list.add(Task('Выйти на пробежку'))
-todo_list.add(Task('Сделать домашку'))
+todo_list.append(Task('Сделать домашку'))
+todo_list.append(Task(''))
+todo_list.append(Task('Сделать домашку'))
+todo_list.append(Task(''))
 
-for item in todo_list:
-    print(item)
+non_empty_tasks = [item for item in todo_list if item]
+non_empty_tasks
+len([item for item in todo_list if not item])
