@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "skypro-day-21"
+version = "0.1.0"
+description = ""
+authors = ["Zheka-m-p <chernik.dota@mail.ru>"]
+readme = "README.md"
+packages = [{include = "skypro_day_21"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest-cov = "^4.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
