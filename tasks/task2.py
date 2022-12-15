@@ -18,12 +18,10 @@ class Item:
          return f'{type(self).__name__}({self.name}, {self.price}, {self.quantity})'
 
 class Phone(Item):
-    def __init__(self):
-        #self.broken_phones = broken_phones
-        super().__init__(1)
+    def __init__(self, name, price, quantity=0, broken_phones=0):
+        self.broken_phones = broken_phones
+        super().__init__(name, price, quantity)
+             
 
-
-#phone1 = Phone("iPhone 10", 500, 5)
-# print(phone1)
 phone2 = Phone("iPhone 10", 500, 5, 1)
-print(phone2)
+print(phone2)  # Такой вывод, тк. метод стр не переопредел9ли
