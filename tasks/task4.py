@@ -1,11 +1,11 @@
 class Meta(type):
     # Метакласс, чтобы в другом классе все атрибуты класса стали состо9ть из заглавных букв
     def __new__(cls, name, based, attrs):
-        new_attrs = {}
+        new_attrs = {} # наш новый список атрибутов для будущего класса
         for k, v in attrs.items():
             if v != 'Math' and v != '__main__':
                 new_attrs[k.upper()] = v
-        new_1_attrs = {}
+        new_1_attrs = {} # для добавления оставшихся (не пользовательских) полей класса
         new_1_attrs['__module__'] = '__main__'
         new_1_attrs['__qualname__'] = 'Math'
         # new_1_attrs['__qualname__'] = str(cls) # в общем виде хз как(
