@@ -39,5 +39,3 @@ dog1 = Dog('Sharik', 4)
 for animal in (cat1, dog1):
     animal.info()
     animal.make_sound()
-
-
