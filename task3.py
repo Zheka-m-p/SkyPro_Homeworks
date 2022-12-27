@@ -4,7 +4,6 @@ import json
 def print_last5_operation(file_name):
     with open(file_name, encoding='utf-8') as f:
         all_data = json.load(f)
-        print(len(all_data))
         all_data = sorted(all_data, key=lambda x: x['date'], reverse=True)
     count = 0
 
